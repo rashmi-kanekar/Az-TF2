@@ -1,5 +1,5 @@
 variable "RG" {
   description = "resource group name"
   type        = string
-  default     = "hub-vpc2"
+  default     = "hub-vpc21"
 }
