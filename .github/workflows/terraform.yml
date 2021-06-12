@@ -5,7 +5,7 @@ on:
     branches:
     - main
     paths:
-    - terraform/RG
+    - terraform/RG/**
   pull_request:
 
 jobs:
