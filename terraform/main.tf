@@ -5,24 +5,15 @@ terraform {
     container_name       = "terraform"
     key                  = "terraform.tfstate"
   }
-
-   required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "=2.46.0"
-    }
-  }
 }
  
+# Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "rg"{
-    name     = "myTFResourceGroup"
-    location = "WestEurope"
-    tags = {
-        Environment = "Terraform Getting Started"
-        Team = "DevOps"
-    }
+# Create a resource group
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
+  location = "West Europe"
 }
