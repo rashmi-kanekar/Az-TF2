@@ -17,7 +17,6 @@ provider "azurerm" {
 data "azurerm_client_config" "current" {}
  
 #Create Resource Group
-resource "azurerm_resource_group" "testrg1" {
-  name     = "testrg1"
+resource "azurerm_resource_group" "temprg1" {
+  name     = "temprg1"
   location = "eastus2"
-}
