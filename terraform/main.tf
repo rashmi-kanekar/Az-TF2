@@ -1,19 +1,26 @@
 terraform {
-  backend "azurerm" {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=2.46.0"
+    }
+  }
+
+   backend "azurerm" {
     resource_group_name  = "TerraformRG"
     storage_account_name = "strg788"
     container_name       = "terraform"
     key                  = "terraform.tfstate"
   }
 }
- 
+
+# Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
 }
- 
-data "azurerm_client_config" "current" {}
- 
-#Create Resource Group
-resource "azurerm_resource_group" "temprg1" {
-  name     = "temprg1"
-  location = "eastus2"
+
+# Create a resource group
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
+  location = "West Europe"
+}
