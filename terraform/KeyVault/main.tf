@@ -4,6 +4,6 @@ provider "azurerm" {
 }
 
 module "RG" {
-    source = "../Modules/ResourceGroup"
+    source = "../Modules/KeyVault"
     RG = var.RG
 }
