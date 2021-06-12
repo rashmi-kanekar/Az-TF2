@@ -4,6 +4,6 @@ provider "azurerm" {
 }
 
 module "RG" {
-    source = "../Modules/ResourceGroup"
-    RG = var.RG
+  source = "../Modules/ResourceGroup"
+  RG = var.RG
 }
