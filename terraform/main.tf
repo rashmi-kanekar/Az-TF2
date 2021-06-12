@@ -1,10 +1,4 @@
 terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "2.63.0"
-    }
-  }
    backend "azurerm" {
     resource_group_name  = "TerraformRG"
     storage_account_name = "strg788"
