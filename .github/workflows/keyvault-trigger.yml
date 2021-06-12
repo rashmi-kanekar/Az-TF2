@@ -1,4 +1,4 @@
-name: 'Terraform'
+name: 'KeyVault-Action'
 
 on:
   push:
