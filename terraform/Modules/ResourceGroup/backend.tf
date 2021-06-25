@@ -4,6 +4,6 @@ terraform {
     storage_account_name = "strg788"
     container_name       = "terraform"
     #key                  = "${var.RG}/terraform.tfstate"
-    key                  = "${var.RG}/terraform.tfstate"
+    key                  = format(${var.RG},"/terraform.tfstate")
   }
 }
