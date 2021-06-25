@@ -1,8 +1,13 @@
 terraform {
-  backend "azurerm" {
-    resource_group_name  = "TerraformRG"
+  backend = "azurerm"
+}
+
+
+data "terraform_remote_state" "foo" {
+  backend = "azurerm"
+  config = {
     storage_account_name = "strg788"
     container_name       = "terraform"
-    key                  = "deleterg/terraform.tfstate"
+    key                  = "${var.RG}/terraform.tfstate"
   }
 }
