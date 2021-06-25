@@ -1,5 +1,5 @@
 variable "RG" {
   description = "resource group name"
   type        = string
-  default     = "TerraRGTest134"
+  default     = "TerraRGTest000"
 }
